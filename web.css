@@ -75,6 +75,93 @@ header {
     color: #511174;
 }
 
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,255,255,.9);
+    position:fixed;
+    top:0; right:-105%;
+    z-index: 10000;
+    height:100%;
+    width:100%;
+}
+
+.login-form-container.active{
+    right:0;
+}
+
+.login-form-container form{
+    background:#fff;
+    border:var(--border);
+    width:40rem;
+    padding:2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin:2rem;
+}
+
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+    text-align: center;
+}
+
+.login-form-container form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box{
+    width: 100%;
+    margin:.7rem 0;
+    font-size: 1.6rem;
+    border:var(--border);
+    border-radius: .5rem;
+    padding:1rem 1.2rem;
+    color:var(--black);
+    text-transform: none;
+}
+
+.login-form-container form .checkbox{
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    padding:1rem 0;
+}
+
+.login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color:var(--light-color);
+    cursor: pointer;
+}
+
+.login-form-container form .btn{
+    text-align: center;
+    width:100%;
+    margin:1.5rem 0;
+}
+
+.login-form-container form p{
+    padding-top: .8rem;
+    color:var(--light-color);
+    font-size: 1.5rem;
+}
+
+.login-form-container form p a{
+    color:var(--green);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn{
+    position: absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 5rem;
+    color:var(--black);
+    cursor: pointer;
+}
 
 
 
@@ -154,13 +241,89 @@ section{
     transition: 0.7s ease;
 }
 .main-btn:hover{
-    background-color: #16151500;
+    background-color: #d8996f00;
     transform: scale(1.1,1.1);
 }
 
-.container {
-    padding: 50px;
+
+.centered {
+    text-align: center;
 }
+
+.search-bar {
+    display: inline-block;
+    width: 650px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+    margin-bottom: 20px; /* Add margin to separate the advanced search link */
+    position: relative; /* Positioning for the search button */
+    border: 2px solid #333; /* Add border to highlight the edges */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    padding: 5px; /* Add padding for inner content */
+}
+
+#search-input {
+    width: calc(100% - 80px); /* Adjust width for input field */
+    height: 100%; /* Adjust height as needed */
+    padding: 10px; /* Add padding inside the input field */
+    font-size: 18px; /* Adjust font size as needed */
+    box-sizing: border-box; /* Ensure padding is included in the specified width */
+    border: none; /* Remove input field border */
+}
+
+#search-button {
+    position: absolute; /* Position the search button */
+    top: 0;
+    right: 0;
+    width: 80px; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    padding: 10px; /* Add padding inside the button */
+    font-size: 18px; /* Adjust font size as needed */
+    box-sizing: border-box; /* Ensure padding is included in the specified width */
+    background-color: #c28a5d; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 0 5px 5px 0; /* Add border radius for rounded corners on the right side */
+}
+
+#search-button i {
+    vertical-align: middle; /* Align the search icon vertically */
+}
+.advanced-search a {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 10px); /* Adjust the distance from the search bar */
+    transform: translateY(-50%);
+    font-size: 24px; /* Adjust the size as needed */
+    color: #ac865b; /* Icon color */
+    text-decoration: none; /* Remove default link styling */
+    z-index: 1; /* Ensure the icon is positioned behind the search bar */
+}
+
+
+
+.filter-text {
+    margin-top: 10px; /* Adjust margin as needed */
+    font-size: 30px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+}
+
+.book-list {
+    position: relative;
+    text-align: center; /* Center the text */
+    padding-bottom: 10px; /* Add padding at the bottom for equal spacing */
+}
+
+.line {
+    width: 80%; /* Adjust width of the line */
+    margin: 0 auto; /* Center the line */
+    margin-top: 10px; /* Adjust margin-top to create space between the line and text */
+    border-left: 4px solid #333; /* Left border to increase thickness */
+    border-bottom: 2px solid #333; /* Line color and thickness */
+}
+
+
+
 
 .featured .featured-slider .box{
     margin:2rem 0;
@@ -242,26 +405,31 @@ section{
     flex: 0 0 auto; /* Fix size of each box */
 }
 
-
 .swiper-button-next,
-.swiper-button-prev{
-    border:var(--border-hover);
-    height:4rem;
-    width:4rem;
-    color:var(--black);
+.swiper-button-prev {
+    border: var(--border-hover);
+    height: 4rem;
+    width: 4rem;
+    color: var(--black);
     background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
+
 .swiper-button-next::after,
-.swiper-button-prev::after{
+.swiper-button-prev::after {
     font-size: 2rem;
 }
 
 .swiper-button-next:hover,
-.swiper-button-prev:hover{
+.swiper-button-prev:hover {
     background: var(--black);
-    color:#fff;
+    color: #fff;
 }
+
 
 
 
@@ -452,23 +620,8 @@ section{
 .loader-container img{
     height:10rem;
 }
-@media (max-width: 1200px) {
-    .featured .featured-slider .box {
-        width: calc(33.33% - 40px); /* Adjust width for three boxes per row */
-    }
-}
 
-@media (max-width: 992px) {
-    .featured .featured-slider .box {
-        width: calc(50% - 40px); /* Adjust width for two boxes per row */
-    }
-}
 
-@media (max-width: 576px) {
-    .featured .featured-slider .box {
-        width: calc(100% - 40px); /* Adjust width for one box per row */
-    }
-}
 
 
 

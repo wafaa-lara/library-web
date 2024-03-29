@@ -14,9 +14,10 @@
 
 </head>
 <body>
+    
     <header>
         <a href="#" class="logo">
-            <img src="https://tinyurl.com/5yjsf3a3" alt="Xlibris Logo" class="logo-img">
+            <img src="https://bit.ly/4cB9Txt" alt="Xlibris Logo" class="logo-img">
         </a>
         
                   <nav class="navigation">
@@ -26,9 +27,38 @@
             <a href="#" id="profile-link" class="profile-link"><i class="fas fa-user fa-lg"></i></a>            
         </nav>
     </header>
-  
-</body>
+    <!-- Login form container -->
+<div class="login-form-container" id="login-form-container">
+    <form>
+        <h3>Login</h3>
+        <div class="box">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="box">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </form>
+    <!-- Close button -->
+    <span id="close-login-btn">&times;</span>
+</div>
+    
+   
 
+
+
+
+    
+
+   
+  
 
    
 
@@ -46,11 +76,24 @@
     </section>
 </body>
 </html>
-<section class="featured" id="featured"style="padding: 20px 0; text-align: center; background-color: beige;">
+<section class="featured" id="featured">
 
-  <h2 class="heading"> <span>Documments</span> </h2>
+    <div class="centered">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by Author, Title or Reader">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="advanced-search">
+            <a href="#"><i class="fas fa-list"></i></a> <!-- List icon -->
+            <div class="filter-text">Listes des livres disponibles</div> <!-- Text with line -->
+            <hr class="line"> 
+        </div>
+    </div>
+    
+    
+    
   
-  <div class="swiper featured-slider">
+  <div class="swiper featured-slider" style="margin-left: 20px;">
 
       <div class="swiper-wrapper">
 
@@ -209,13 +252,18 @@
                   <a href="#" class="btn">Détails</a>
               </div>
           </div>
-
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
       </div>
+      <a href="cate.html" class="btn voir-categories-btn" style="font-size: 1.5em; color: rgb(4, 43, 43);">Voir toutes les catégories</a>
 
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
 
+
+      
   </div>
+  
+ 
+  
 
 </section>
 

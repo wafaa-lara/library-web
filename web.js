@@ -1,9 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const profileLink = document.getElementById('profile-link');
+  const loginFormContainer = document.getElementById('login-form-container');
 
-searchForm = document.querySelector('.search-form');
+  profileLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      loginFormContainer.classList.toggle('active');
+  });
 
-document.querySelector('#search-btn').onclick = () =>{
-  searchForm.classList.toggle('active');
-}
+  const closeLoginFormBtn = document.getElementById('close-login-btn');
+  closeLoginFormBtn.addEventListener('click', function() {
+      loginFormContainer.classList.remove('active');
+  });
+});
+
+
 
 let loginForm = document.querySelector('.login-form-container');
 
@@ -14,6 +24,7 @@ document.querySelector('#login-btn').onclick = () =>{
 document.querySelector('#close-login-btn').onclick = () =>{
   loginForm.classList.remove('active');
 }
+
 
 window.onscroll = () =>{
 
@@ -26,6 +37,8 @@ window.onscroll = () =>{
   }
 
 }
+
+
 
 window.onload = () =>{
 

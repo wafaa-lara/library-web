@@ -1,0 +1,35 @@
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Remove button color */
+button {
+    background-color: #fff;
+    border: none;
+    font-size: 10px;
+    width: 33%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3a220c;
+    margin-bottom: 10px;
+
+}
+@media (max-width: 1024px)
+._1Golt1 {
+    width: 50%;
+}
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, div, a, p, span {
+    user-select: text !important;
+}
+body {
+    font-family: Source Sans Pro, serif;
+    margin: 0;
+    color: var(--spl-color-text-primary);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
