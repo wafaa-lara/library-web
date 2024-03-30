@@ -325,12 +325,20 @@ section{
 
 
 
-.featured .featured-slider .box{
-    margin:2rem 0;
+.featured .featured-slider .box {
+    margin: 2rem 0;
     position: relative;
     overflow: hidden;
-    border:var(--border);
+    border: var(--border);
     text-align: center;
+    width: 300px; /* Set a standard width for the box */
+    height: 400px; /* Set a standard height for the box */
+}
+
+#featured {
+    padding: 200px 10px;
+    text-align: center;
+    background-color: beige;
 }
 
 .featured .featured-slider .box:hover{
@@ -429,6 +437,12 @@ section{
     background: var(--black);
     color: #fff;
 }
+.voir-categories-btn {
+    float: right;
+    color: rgb(4, 43, 43); /* Default text color */
+}
+
+
 
 
 
